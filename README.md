@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# A Página
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Estrutura de uma página estática de notícias criada com a biblioteca React.
+Como boa prática, utilizamos componentes para tornar mais
+claro onde está cada parte do código. Logo, em conjunto eles
+formem o todo da página.
 
-## Available Scripts
+# Práticas:
 
-In the project directory, you can run:
+JSX (HTML E JS) <br>
+Referenciar imagens através de variáveis em JavaScript <br>
+CSS (Referenciando por id ou classes; Também Inline) <br>
+Todo componente em classe deve extender React.Component
 
-### `npm start`
+Modificar dados nos componentes de forma dinâmica com o conceito de props(Objeto oculto):<br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<b>Exemplo:</b> <br>
+Arquivo: App.jsx
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<<code>Article title="Space News"</code>/>
 
-### `npm test`
+Arquivo: Article.jsx
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<code>
+this.props = { title: "Space News"}
+</code>
 
-### `npm run build`
+<br>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Conceito de estados (State)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+O componente Counter foi criado à parte para trabalhar
+o conceito de estados.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Utilizamos o state para atualizar alguma parte específica da aplicação,
+dessa forma o React observa e modifica apenas onde realmente é necessário
+deixando a página mais leve.
 
-### `npm run eject`
+1 - Inicializa no construtor com o valor desejado:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Arquivo: Counter.jsx
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<code>
+this.state = { contador: 0}
+</code>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<br>
+2 - Declara no elemento HTML desejado e especifica qual evento irá chamar o método set.State através de uma função e lógica desenvolvida:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<br>
 
-## Learn More
+<b>Exemplo:</b>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<code>button onClick={() => {this.setState({ contador: this.state.contador - 1})}}</code>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Tecnologias
 
-### Code Splitting
+<ul>
+  <li>React</li>
+  <li>JSX</li>
+  <li>CSS</li>
+</ul>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Ferramentas
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<ul>
+  <li>VScode</li>
+  <li>Github</li>
+  <li>Página Web</li>
+</ul>
