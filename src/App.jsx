@@ -7,6 +7,22 @@ import articleImg from "./assets/images/uma-esfera-brilhante-do-ceu-orbita-a-gal
 import "./styles/App.css";
 
 function App() {
+  const [news, setNews] = useState([]);
+
+  useEffect(() => {
+    async function loadNews() {
+      const response = await axios.get(
+        "https://api.spaceflightnewsapi.net/v4/articles"
+      );
+
+      const newsData = response.data;
+      //console.log(newsData)
+      setNews(newsData);
+    }
+
+    loadNews();
+  }, []);
+
   return (
     <>
       <Navbar />
