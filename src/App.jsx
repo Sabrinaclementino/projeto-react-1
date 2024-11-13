@@ -30,24 +30,16 @@ function App() {
       {/* <Counter /> */}
 
       <section id="articles">
-        <Article
-          title="Space News"
-          provider="NASA"
-          description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia dolore fuga ab eveniet ut. Corrupti debitis quisquam dolores ad, consectetur maxime! Optio, deleniti eveniet. Modi ut hic blanditiis neque ea!"
-          thumbnail={articleImg}
-        />
-        <Article
-          title="Space News"
-          provider="NASA"
-          description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia dolore fuga ab eveniet ut. Corrupti debitis quisquam dolores ad, consectetur maxime! Optio, deleniti eveniet. Modi ut hic blanditiis neque ea!"
-          thumbnail={articleImg}
-        />
-        <Article
-          title="Space News"
-          provider="NASA"
-          description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia dolore fuga ab eveniet ut. Corrupti debitis quisquam dolores ad, consectetur maxime! Optio, deleniti eveniet. Modi ut hic blanditiis neque ea!"
-          thumbnail={articleImg}
-        />
+        {news.map((article) => {
+          return (
+            <Article
+              title={article.title}
+              provider={article.news_site}
+              description={article.summary}
+              thumbnail={article.image_url}
+            />
+          );
+        })}
       </section>
     </>
   );
